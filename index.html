@@ -17,57 +17,65 @@
   <body>
     <!--Шапка сайта-->
     <header class="page-header">
-      <div class="container main-nav">
-        <nav class="nav">
-          <a href="./" class="logo">
-            <p class="logo-words">
-              <span class="logo-accent">Web</span> Studio
-            </p>
-          </a>
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link current">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="item">
-            <a href="" class="link">
-              <svg class="link-icon">
-                <use href="./images/sprite.svg#icon-envelope"></use>
-                <desc>электронная почта</desc>
-              </svg>
-              info@devstudio.com
+      <div class="">
+          <div class="container main-nav">
+            <a href="./" class="logo">
+              <p class="logo-words">
+                <span class="logo-accent">Web</span> Studio
+              </p>
             </a>
-          </li>
-          <li class="item">
-            <a href="" class="link">
-              <svg class="link-icon" width="10" height="14.94">
-                <use href="./images/sprite.svg#icon-smartphone"></use>
-                <desc>смартфон</desc>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            <div class="menu-container" id="menu-container" data-menu>
+              <nav class="nav"></nav>
+              <ul class="site-nav list">
+                <li class="item">
+                  <a href="./index.html" class="link current">Студия</a>
+                </li>
+                <li class="item">
+                  <a href="./portfolio.html" class="link">Портфолио</a>
+                </li>
+                <li class="item"><a href="" class="link">Контакты</a></li>
+              </ul>
+              </nav>
+              <ul class="contacts">
+                <li class="item">
+                  <a href="" class="link">
+                    <svg class="link-icon">
+                      <use href="./images/sprite.svg#icon-envelope"></use>
+                      <desc>электронная почта</desc>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="" class="link">
+                    <svg class="link-icon" width="10" height="14.94">
+                      <use href="./images/sprite.svg#icon-smartphone"></use>
+                      <desc>смартфон</desc>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button type="button" data-modal-close>Закрыть</button>
+          </div>
       </div>
+      
     </header>
 
     <main>
       <!--Герой-->
       <section class="hero">
-        <div class="hero-container overlay">
-          <h1 class="hero-title">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
-          <button type="button" class="button secondary" data-modal-open>
-            Заказать услугу
-          </button>
+        <div class="hero-container">
+          <div class="overlay">
+            <h1 class="hero-title">
+              Эффективные решения <br />
+              для вашего бизнеса
+            </h1>
+            <button type="button" class="button secondary" data-modal-open>
+              Заказать услугу
+            </button>
+          </div>
         </div>
       </section>
 
@@ -600,6 +608,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script>
       (() => {
         document
