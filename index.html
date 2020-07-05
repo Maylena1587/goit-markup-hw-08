@@ -17,70 +17,62 @@
   <body>
     <!--Шапка сайта-->
     <header class="page-header">
-      <div class="">
-        <div class="container main-nav">
-          <a href="./" class="logo">
-            <p class="logo-words">
-              <span class="logo-accent">Web</span> Studio
-            </p>
-          </a>
+      <div class="container main-nav">
+        <a href="./" class="logo">
+          <p class="logo-words"><span class="logo-accent">Web</span> Studio</p>
+        </a>
+        <nav class="nav">
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-modal-close
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#icon-cross"
+              ></use>
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
           <div class="menu-container" id="menu-container" data-menu>
-            <nav class="nav">
-              <ul class="site-nav list">
-                <li class="item">
-                  <a href="./index.html" class="link current">Студия</a>
-                </li>
-                <li class="item">
-                  <a href="./portfolio.html" class="link">Портфолио</a>
-                </li>
-                <li class="item"><a href="" class="link">Контакты</a></li>
-              </ul>
-
-              <ul class="contacts">
-                <li class="item">
-                  <a href="" class="link">
-                    <svg class="link-icon">
-                      <use href="./images/sprite.svg#icon-envelope"></use>
-                      <desc>электронная почта</desc>
-                    </svg>
-                    info@devstudio.com
-                  </a>
-                </li>
-                <li class="item">
-                  <a href="" class="link">
-                    <svg class="link-icon" width="10" height="14.94">
-                      <use href="./images/sprite.svg#icon-smartphone"></use>
-                      <desc>смартфон</desc>
-                    </svg>
-                    +38 096 111 11 11
-                  </a>
-                </li>
-              </ul>
-              <button
-                type="button"
-                class="menu-button is-open"
-                aria-expanded="false"
-                aria-controls="menu-container"
-                data-modal-close
-              >
-                <svg
-                  width="40"
-                  height="40"
-                  aria-label="Переключатель мобильного меню"
-                >
-                  <use
-                    class="icon-cross"
-                    href="./images/sprite.svg#icon-cross"
-                  ></use>
-                  <use
-                    class="icon-menu"
-                    href="./images/sprite.svg#icon-menu"
-                  ></use>
-                </svg>
-              </button>
-            </nav>
+            <ul class="site-nav list">
+              <li class="item">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+            <ul class="contacts">
+              <li class="item">
+                <a href="" class="link">
+                  <svg class="link-icon">
+                    <use href="./images/sprite.svg#icon-envelope"></use>
+                    <desc>электронная почта</desc>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a href="" class="link">
+                  <svg class="link-icon" width="10" height="14.94">
+                    <use href="./images/sprite.svg#icon-smartphone"></use>
+                    <desc>смартфон</desc>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -105,7 +97,7 @@
         <div class="container">
           <h2 class="section-title visually-hidden">Компания гарантирует</h2>
           <ul class="feature-list list">
-            <li class="element">
+            <li class="element team-lead">
               <div class="advantages">
                 <svg width="65.32">
                   <use href="./images/sprite.svg#icon-antenna"></use>
@@ -118,7 +110,7 @@
                 формированию позиции.
               </p>
             </li>
-            <li class="element">
+            <li class="element team-lead">
               <div class="advantages">
                 <svg width="70">
                   <use href="./images/sprite.svg#icon-clock"></use>
@@ -131,7 +123,7 @@
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="element">
+            <li class="element team-lead">
               <div class="advantages">
                 <svg width="70">
                   <use href="./images/sprite.svg#icon-vector"></use>
@@ -144,7 +136,7 @@
                 степени обуславливает.
               </p>
             </li>
-            <li class="element">
+            <li class="element team-lead">
               <div class="advantages">
                 <svg width="70">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
