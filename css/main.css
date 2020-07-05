@@ -10,9 +10,33 @@
 }
 
 .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
-  margin: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 767px) {
+  .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+  .list {
+    margin: -15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .list {
+    margin: 0;
+  }
 }
 
 .logo-words,
@@ -27,12 +51,15 @@
   height: auto;
 }
 
-.element {
-  width: 270px;
+.team-lead {
+  text-align: center;
 }
 
-.element + .element {
-  margin-left: 30px;
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+  .team-lead {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
 }
 
 .shadow-box {
@@ -157,6 +184,10 @@ body {
   position: absolute;
   top: 50%;
   left: 42px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-bottom: 4px;
@@ -385,17 +416,24 @@ textarea {
   background-color: #2196f3;
 }
 
-@media screen and (min-width: 768px) {
-  .menu-container {
-    display: block;
+@media screen and (min-width: 480px) {
+  .section {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 480px) {
-  .menu-container {
-    display: none;
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -412,13 +450,26 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-width: 480px) {
+  .main-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 /* nav */
+@media screen and (min-width: 1200px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .logo {
   display: block;
   padding-top: 24px;
@@ -530,6 +581,45 @@ textarea {
   border-radius: 2px;
 }
 
+.current .menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.current .menu-button .icon-cross {
+  display: none;
+}
+
+.current .menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.current .menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.current .menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.current .menu-container.is-open {
+  display: block;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,6 +630,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 400px;
   margin: 0px auto;
   background-color: #2f303a;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/header.jpg);
@@ -547,18 +638,6 @@ textarea {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 480px) {
-  .hero {
-    height: 400px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 400px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -628,11 +707,6 @@ textarea {
   }
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .section-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -644,9 +718,6 @@ textarea {
 }
 
 .feature-list .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -677,6 +748,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.title {
+  text-align: center;
+}
+
 .text {
   font-size: 14px;
   line-height: 1.7;
@@ -702,11 +777,20 @@ textarea {
   border-radius: 4px;
 }
 
-.work-list,
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 0) {
+  .work-list,
+  .team-list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-list,
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .activity {
@@ -719,6 +803,20 @@ textarea {
   bottom: 0;
   width: 100%;
   padding: 27px 0px 27px 0px;
+}
+
+@media screen and (min-width: 0) {
+  .section.main-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section.main-none {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .team {
@@ -780,6 +878,14 @@ textarea {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+  .team-list {
+    margin: -15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .position {
   margin-top: 0px;
   margin-bottom: 16px;
@@ -795,21 +901,33 @@ textarea {
 }
 
 .customers .examples {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
   height: 90px;
 }
 
-.customers .examples + .examples {
-  margin-left: 30px;
+@media screen and (min-width: 1170px) {
+  .customers .examples {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .examples {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 1169px) {
+  .examples {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
 }
 
 .examples-icon {
@@ -822,12 +940,17 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1170px) {
+  .examples-icon {
+    width: 170px;
+  }
 }
 
 .examples-icon:hover, .examples-icon:focus {
@@ -846,16 +969,30 @@ textarea {
 }
 
 .main-footer {
-  padding-top: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 480px) {
+  .main-footer {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
 }
 
 .footer {
@@ -863,17 +1000,27 @@ textarea {
 }
 
 .footer-logo {
-  margin-bottom: 10px;
   margin-right: 171px;
   color: #ffffff;
   font-weight: 700;
   font-size: 22px;
   line-height: 1.18;
   text-decoration: none;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    margin-bottom: 10px;
+  }
 }
 
 .footer-logo .accent {
   color: #2196f3;
+}
+
+.address {
+  margin-bottom: 8px;
 }
 
 .address .address-list {
@@ -892,6 +1039,10 @@ textarea {
   padding-left: 0;
 }
 
+.address-contacts {
+  margin-bottom: 8px;
+}
+
 .address-contact {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
@@ -900,18 +1051,30 @@ textarea {
   text-decoration: none;
 }
 
-.footer-contacts {
-  margin-bottom: 21px;
+@media screen and (min-width: 1200px) {
+  .act {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .act {
+    margin: 60px 0;
+  }
 }
 
 .subscription {
   display: inline-block;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.subscription-hover {
+  margin-bottom: 20px;
 }
 
 .list .item {
@@ -945,37 +1108,44 @@ textarea {
   fill: #ffffff;
 }
 
-.developed {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 18px;
-  padding-bottom: 21px;
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .submit-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.submit-element {
-  margin-right: 12px;
+@media screen and (min-width: 768px) {
+  .submit-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .submit-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .submit-mail {
-  min-width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -988,5 +1158,13 @@ textarea {
   border-radius: 4px;
   background-color: inherit;
   padding: 15px 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .submit-mail {
+    margin-right: 12px;
+    min-width: 358px;
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

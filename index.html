@@ -18,14 +18,14 @@
     <!--Шапка сайта-->
     <header class="page-header">
       <div class="">
-          <div class="container main-nav">
-            <a href="./" class="logo">
-              <p class="logo-words">
-                <span class="logo-accent">Web</span> Studio
-              </p>
-            </a>
-            <div class="menu-container" id="menu-container" data-menu>
-              <nav class="nav"></nav>
+        <div class="container main-nav">
+          <a href="./" class="logo">
+            <p class="logo-words">
+              <span class="logo-accent">Web</span> Studio
+            </p>
+          </a>
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="nav">
               <ul class="site-nav list">
                 <li class="item">
                   <a href="./index.html" class="link current">Студия</a>
@@ -35,7 +35,7 @@
                 </li>
                 <li class="item"><a href="" class="link">Контакты</a></li>
               </ul>
-              </nav>
+
               <ul class="contacts">
                 <li class="item">
                   <a href="" class="link">
@@ -56,11 +56,32 @@
                   </a>
                 </li>
               </ul>
-            </div>
-            <button type="button" data-modal-close>Закрыть</button>
+              <button
+                type="button"
+                class="menu-button is-open"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-modal-close
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  aria-label="Переключатель мобильного меню"
+                >
+                  <use
+                    class="icon-cross"
+                    href="./images/sprite.svg#icon-cross"
+                  ></use>
+                  <use
+                    class="icon-menu"
+                    href="./images/sprite.svg#icon-menu"
+                  ></use>
+                </svg>
+              </button>
+            </nav>
           </div>
+        </div>
       </div>
-      
     </header>
 
     <main>
@@ -141,7 +162,7 @@
       </section>
 
       <!--Чем мы занимаемся-->
-      <section class="section">
+      <section class="section main-none">
         <div class="container main-work">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="work-list list">
@@ -181,12 +202,11 @@
         <div class="container main-team">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
-            <li class="element shadow-box">
+            <li class="element shadow-box team-lead">
               <img
                 class="img-team"
                 src="./images/img.jpg"
                 alt="фото члена команды"
-                width="270"
               />
               <div class="profile">
                 <h3 class="title">John Smith</h3>
@@ -227,12 +247,11 @@
                 </ul>
               </div>
             </li>
-            <li class="element shadow-box">
+            <li class="element shadow-box team-lead">
               <img
                 class="img-team"
                 src="./images/img-1.jpg"
                 alt="фото члена команды"
-                width="270"
               />
               <div class="profile">
                 <h3 class="title">Marta Stewart</h3>
@@ -273,12 +292,11 @@
                 </ul>
               </div>
             </li>
-            <li class="element shadow-box">
+            <li class="element shadow-box team-lead">
               <img
                 class="img-team"
                 src="./images/img-2.jpg"
                 alt="фото члена команды"
-                width="270"
               />
               <div class="profile">
                 <h3 class="title">Robert Jakis</h3>
@@ -319,12 +337,11 @@
                 </ul>
               </div>
             </li>
-            <li class="element shadow-box">
+            <li class="element shadow-box team-lead">
               <img
                 class="img-team"
                 src="./images/img-3.jpg"
                 alt="фото члена команды"
-                width="270"
               />
               <div class="profile">
                 <h3 class="title">Martin Doe</h3>
@@ -443,15 +460,15 @@
               </a>
             </address>
             <ul class="address-link">
-              <li>
+              <li class="address-contacts">
                 <a href="" class="address-contact">info@example.com</a>
               </li>
-              <li>
+              <li class="address-contacts">
                 <a href="" class="address-contact">+38 099 111 11 11</a>
               </li>
             </ul>
           </div>
-          <div class="">
+          <div class="act">
             <div class="subscription-hover">
               <b class="subscription hover">присоединяйтесь</b>
             </div>
@@ -508,30 +525,23 @@
           </div>
           <div class="footer-contacts">
             <b class="subscription hover">Подпишитесь на рассылку</b>
-            <form autocomplete="off">
-              <ul class="submit-list">
-                <li class="submit-element">
-                  <input
-                    class="submit-mail"
-                    id="mail"
-                    type="email"
-                    name="mail"
-                    placeholder="E-mail"
-                  />
-                </li>
-                <li>
-                  <button class="submit submit-button" type="submit">
-                    Подписаться
-                    <svg width="24" height="24" class="">
-                      <use href="./images/sprite.svg#icon-icon-send"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+            <form class="submit-list" autocomplete="off">
+              <input
+                class="submit-mail"
+                id="mail"
+                type="email"
+                name="mail"
+                placeholder="E-mail"
+              />
+              <button class="submit submit-button" type="submit">
+                Подписаться
+                <svg width="24" height="24" class="">
+                  <use href="./images/sprite.svg#icon-icon-send"></use>
+                </svg>
+              </button>
             </form>
           </div>
         </div>
-        <p class="developed container">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -599,12 +609,12 @@
             </label>
           </div>
           <button class="submit" type="submit">Отправить</button>
-          <button class="close" data-modal-close>
-            <svg width="18" height="18" class="">
-              <use href="./images/sprite.svg#icon-close-black"></use>
-            </svg>
-          </button>
         </form>
+        <button class="close" data-modal-close>
+          <svg width="18" height="18" class="">
+            <use href="./images/sprite.svg#icon-close-black"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

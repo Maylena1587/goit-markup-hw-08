@@ -1,9 +1,5 @@
 //* section */
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .section-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -18,7 +14,7 @@
 //* feature */
 
 .feature-list .title {
-  display: flex;
+  // display: flex;
 
   font-weight: 700;
   font-size: 14px;
@@ -49,7 +45,9 @@
   margin-top: 0px;
   margin-bottom: 10px;
 }
-
+.title {
+  text-align: center;
+}
 .text {
   font-size: 14px;
   line-height: 1.7;
@@ -72,7 +70,13 @@
 
 .work-list,
 .team-list {
-  display: flex;
+  // display: flex;
+  @media screen and(min-width: 0) {
+    display: block;
+  }
+  @media screen and(min-width: 768px) {
+    display: flex;
+  }
 }
 
 .activity {
@@ -84,4 +88,12 @@
   bottom: 0;
   width: 100%;
   padding: 27px 0px 27px 0px;
+}
+.section.main-none {
+  @media screen and(min-width: 0) {
+    display: none;
+  }
+  @media screen and(min-width: 768px) {
+    display: flex;
+  }
 }
