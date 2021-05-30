@@ -1,6 +1,5 @@
 .page-header {
   position: fixed;
-  //position: relative;
   width: 100%;
 
   border-bottom: 1px solid #ececec;
@@ -16,8 +15,6 @@
 .main-nav {
   display: flex
   align-items: center;
-  
-  //position: fixed;
   border-bottom: 1px solid #ececec;
   @media screen and(min-width: 480px) {
     justify-content: space-between;
@@ -42,7 +39,7 @@
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.18;
   text-decoration: none;
 
